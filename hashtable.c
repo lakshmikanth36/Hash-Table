@@ -92,7 +92,7 @@ int main() {
     initializeHashTable(&ht);
 
     // Adding key-value pairs
-    insert(&ht, "name", "John");
+    insert(&ht, "name", "TestHashTable");
     insert(&ht, "age", "25");
     insert(&ht, "city", "New York");
 
