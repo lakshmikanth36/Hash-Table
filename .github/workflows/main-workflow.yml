@@ -1,0 +1,18 @@
+name: Build and Run
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: build
+      run: g++ -Wall -Wextra -o hashtable*.c
+      
+    - name: run
+      run: ./hashtable
+
