@@ -10,8 +10,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: install
+      run: |
+       sudo apt-get update
+       sudo apt-get install build-essential
+       
     - name: build
-      run: g++ -Wall -Wextra -o hashtable*.c
+      run: gcc hashtable.c -o hashtable
       
     - name: run
       run: ./hashtable
